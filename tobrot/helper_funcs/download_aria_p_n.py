@@ -256,9 +256,9 @@ async def call_apropriate_function(
             var = incoming_link.encode('utf-8')
             file = hashlib.md5(var).hexdigest()
             subprocess.run(
-                f"wget -O /CendrawasihLeech/{file}.torrent '{incoming_link}'", shell=True)
+                f"wget -O /MalluMoviee/{file}.torrent '{incoming_link}'", shell=True)
             sagtus, err_message = add_torrent(
-                aria_instance, f"/CendrawasihLeech/{file}.torrent")
+                aria_instance, f"/MalluMovies/{file}.torrent")
         else:
             sagtus, err_message = add_url(
                 aria_instance, incoming_link, c_file_name)
@@ -352,7 +352,7 @@ async def call_apropriate_function(
                 if message_to_send != "":
                     message_to_send = f"<b>List file in</b> `{downloading_dir_name}`:\n" + \
                         message_to_send
-                    message_to_send = message_to_send + "\n" + "#CendrawasihLeech"
+                    message_to_send = message_to_send + "\n" + "#MalluMovies"
                 else:
                     message_to_send = "<i>FAILED</i> Failed uploading files."
                 await user_message.reply_text(
